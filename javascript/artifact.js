@@ -30,11 +30,14 @@ Artifact.prototype.setDirection = function(CARDINAL_POINT){
     this.dirX = this.directions[CARDINAL_POINT].dirX;
     this.dirY = this.directions[CARDINAL_POINT].dirY;
 };
+
 //Meneja la bola
 Artifact.prototype.move = function(){
        //if (this.state=="runvertical") this.dirX=0;
        this.locate(parseInt(this.imgObj.style.left)+(this.dirX*this.speed),parseInt(this.imgObj.style.top)+(this.dirY*this.speed));
  }; //End move method
+
+
 
 //Posicionem Bola de manera absoluta en X i Y i comprovem llímits
 Artifact.prototype.locate = function(x,y){
